@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Complex Website</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #222;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 15px 10px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    /* Hero section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Sections styling */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section:nth-of-type(even) {
+  background-color: #fff;
+}
+
+section:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+
+/* About, Services, Portfolio, Blog, Contact styles */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #222;
+}
+
+.about, .services, .portfolio, .blog, .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Service cards and portfolio items */
+.cards, .portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card, .portfolio-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover, .portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact form styles */
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  padding: 12px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media(max-width: 768px){
+  nav ul {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .cards, .portfolio-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <h1>Welcome to My Complex Website</h1>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>We are passionate web developers creating modern, responsive, and engaging websites. Our mission is to help you succeed online.</p>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Web Design</h3>
+      <p>Create beautiful and responsive websites tailored to your needs.</p>
+    </div>
+    <div class="card">
+      <h3>Development</h3>
+      <p>Build fast, scalable, and robust web applications.</p>
+    </div>
+    <div class="card">
+      <h3>SEO Optimization</h3>
+      <p>Improve your website's visibility on search engines.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h2>Our Portfolio</h2>
+  <div class="portfolio-items">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Project 1" style="width:100%; border-radius:10px;">
+      <h3>Project One</h3>
+      <p>A modern website design for a startup.</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Project 2" style="width:100%; border-radius:10px;">
+      <h3>Project Two</h3>
+      <p>Responsive e-commerce platform.</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Project 3" style="width:100%; border-radius:10px;">
+      <h3>Project Three</h3>
+      <p>Creative portfolio website for a photographer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog">
+  <h2>Latest Blog Posts</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>How to Build a Responsive Website</h3>
+      <p>Learn the fundamentals of responsive web design to make your websites look great on all devices.</p>
+    </div>
+    <div class="card">
+      <h3>Top 10 Web Development Tools</h3>
+      <p>Boost your productivity with these essential tools for modern web development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div id="formMessage" style="margin-top:15px; color:green;"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 My Complex Website. All rights reserved.</p>
+  <p>
+    <a href="#" style="color:#fff; margin:0 10px;">Facebook</a>
+    <a href="#" style="color:#fff; margin:0 10px;">Twitter</a>
+    <a href="#" style="color:#fff; margin:0 10px;">Instagram</a>
+  </p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Handle contact form submission
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name && email && message){
+      document.getElementById('formMessage').textContent = 'Thank you for reaching out! We will contact you soon.';
+      // Reset form
+      document.getElementById('contactForm').reset();
+    } else {
+      document.getElementById('formMessage').textContent = 'Please fill in all fields.';
+      document.getElementById('formMessage').style.color = 'red';
+    }
+  });
+</script>
+
+</body>
+</html>
